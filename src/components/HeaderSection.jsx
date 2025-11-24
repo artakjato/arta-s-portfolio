@@ -19,16 +19,6 @@ const Section = styled.section`
   }
 `;
 
-const Badge = styled.span`
-  display: inline-block;
-  padding: 0.4rem 1rem;
-  background-color: #e2e8f0;
-  border-radius: 8px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: #475569;
-`;
-
 const Title = styled.h1`
   font-size: 2.4rem;
   margin: 0.5rem 0 1rem;
@@ -87,7 +77,6 @@ function HeaderSection() {
   return (
     <Section>
       <div>
-        <Badge>Section 1</Badge>
         <Title>Frontend Developer</Title>
         <Intro>
           Hi! I’m Arta — junior frontend developer with a background in recruitment

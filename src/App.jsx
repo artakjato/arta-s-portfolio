@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import HeaderSection from "./components/HeaderSection";
+import SkillsSection from "./components/SkillsSection";
 
 const Page = styled.div`
   display: flex;
@@ -25,6 +26,7 @@ function App() {
     <Page>
       <Content>
         <HeaderSection />
+        <SkillsSection />
       </Content>
     </Page>
   );
