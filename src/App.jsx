@@ -1,14 +1,15 @@
 import styled from "styled-components";
+import GlobalStyles from "./GlobalStyles";
 import HeaderSection from "./components/HeaderSection";
 import SkillsSection from "./components/SkillsSection";
+import ProjectsSection from "./components/ProjectsSection";
 
 const Page = styled.div`
   display: flex;
   justify-content: center;
   background-color: #f7f7f7;
   min-height: 100vh;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 3rem 0;
 `;
 
 const Content = styled.main`
@@ -23,12 +24,16 @@ const Content = styled.main`
 
 function App() {
   return (
+    <>
+    <GlobalStyles />
     <Page>
       <Content>
         <HeaderSection />
         <SkillsSection />
+        <ProjectsSection />
       </Content>
     </Page>
+    </>
   );
 }
 
