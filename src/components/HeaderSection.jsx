@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import profile from "../assets/profile.jpg";
-import linkedinIcon from "../assets/linkedin.svg";
-import githubIcon from "../assets/github.svg";
+import linkedinIcon from "../assets/Linkedin.svg";
+import githubIcon from "../assets/Github.svg";
 
 
 const Section = styled.section`
