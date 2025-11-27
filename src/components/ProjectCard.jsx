@@ -35,7 +35,7 @@ const Description = styled.p`
   font-size: 0.9rem;
   line-height: 1.5;
   margin: 0 0 1rem;
-  color: #4b5563;
+  color: #374151;
 `;
 
 const ButtonRow = styled.div`

@@ -73,6 +73,34 @@ const Icon = styled.img`
   filter: brightness(0) invert(1); /* makes icon white */
 `;
 
+const NavLinks = styled.nav`
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+`;
+
+const NavLink = styled.a`
+  text-decoration: none;
+  color: #0f172a;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.2rem;
+    width: 0;
+    height: 2px;
+    background-color: #f97316;
+    transition: width 0.2s ease;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+`;
+
 function HeaderSection() {
   return (
     <Section>
@@ -85,7 +113,7 @@ function HeaderSection() {
 
     <IconRow>
     <IconLink
-        href="https://www.linkedin.com/in/artakjato"
+        href="https://www.linkedin.com/in/arta-kjato"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn profile"
@@ -102,6 +130,13 @@ function HeaderSection() {
         <Icon src={githubIcon} alt="" />
     </IconLink>
     </IconRow>
+
+    <NavLinks>
+      <NavLink href="#skills">Skills</NavLink>
+      <NavLink href="#projects">Projects</NavLink>
+      <NavLink href="#journey">My journey</NavLink>
+      <NavLink href="#contact">Contact</NavLink>
+    </NavLinks>
 
       </div>
 

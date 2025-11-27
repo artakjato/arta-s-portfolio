@@ -13,3 +13,10 @@ body {
 #root {
   min-height: 100vh;
 }
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

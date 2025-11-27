@@ -28,7 +28,7 @@ const Title = styled.h3`
 const Text = styled.p`
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: #374151;
 `;
 
 const ReadMore = styled.a`

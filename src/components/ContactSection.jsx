@@ -30,7 +30,7 @@ const Heading = styled.h2`
 const Intro = styled.p`
   font-size: 1rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: #374151;
 `;
 
 const ContactList = styled.dl`
@@ -43,7 +43,7 @@ const Label = styled.dt`
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #6b7280;
+  color: #4b5563;
 `;
 
 const Value = styled.dd`
@@ -67,15 +67,19 @@ const AvatarWrapper = styled.div`
 `;
 
 const AvatarRing = styled.div`
-  border: 6px solid #f97316;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  padding: 4px;
+  border: 8px solid #f97316;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 `;
 
 const Avatar = styled.img`
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 `;
 
@@ -90,24 +94,18 @@ function ContactSection() {
         </Intro>
 
         <ContactList>
-          <div>
-            <Label>Name</Label>
-            <Value>Arta Kjato</Value>
-          </div>
+            <Label as="dt">Name</Label>
+            <Value as="dd">Arta Kjato</Value>
 
-          <div>
-            <Label>Email</Label>
-            <Value>
+            <Label as="dt">Email</Label>
+            <Value as="dd">
               <ContactLink href="mailto:artakjato@gmail.com">artakjato@gmail.com</ContactLink>
             </Value>
-          </div>
-
-          <div>
-            <label>Phone</label>
-            <Value>
+ 
+            <Label as="dt">Phone</Label>
+            <Value as="dd">
               <ContactLink href="tel:+467345822768">+46 (0) 73 458 27 68</ContactLink>
             </Value>
-          </div>
         </ContactList>
       </TextBlock>
 
