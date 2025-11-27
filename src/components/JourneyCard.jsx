@@ -11,7 +11,7 @@ const Card = styled.article`
   gap: 0.75rem;
   transition:
     transform 0.25s ease;
-    box-shadow 0.25s ease;
+    box-shadow: 0.25s ease;
     border-color: 0.25s ease;
 
   &:hover {
@@ -20,14 +20,6 @@ const Card = styled.article`
     box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
   }
 ;`
-
-const Tag = styled.span`
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: #6b7280;
-  `;
 
 const Title = styled.h3`
   font-size: 1.1rem;
@@ -39,7 +31,7 @@ const Text = styled.p`
   color: #4b5563;
 `;
 
-const Link = styled.a`
+const ReadMore = styled.a`
   margin-top: 0.5rem;
   font-size: 0.85rem;
   font-weight: 500;
@@ -52,15 +44,14 @@ const Link = styled.a`
   }
 `; 
 
-function JourneyCard({ tag, title, text, url }) {
+function JourneyCard({ title, text, link }) {
 return (
     <Card>
-      <Tag>{tag}</Tag>
       <Title>{title}</Title>
       <Text>{text}</Text>
-      <Link href={url} target="_blank" rel="noopener noreferrer">
+      <ReadMore href={link} target="_blank" rel="noopener noreferrer">
           Read article
-      </Link>
+      </ReadMore>
     </Card>
   ); 
 }

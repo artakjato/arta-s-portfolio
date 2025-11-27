@@ -11,7 +11,7 @@ const Card = styled.div`
   transition:
     transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
     border-color 0.25s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.25s ease;
 
   &:hover {
     border-color: #f97316;
@@ -89,7 +89,7 @@ function ProjectCard({ image, title, description, demo, code }) {
       <Description>{description}</Description>
 
       <ButtonRow>
-        <PrimaryButton href={demo} target="_blank" rel="noopener noreferrer" filled>
+        <PrimaryButton href={demo} target="_blank" rel="noopener noreferrer">
           Live demo
         </PrimaryButton>
         <SecondaryButton href={code} target="_blank" rel="noopener noreferrer">

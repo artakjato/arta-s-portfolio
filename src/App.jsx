@@ -4,6 +4,8 @@ import HeaderSection from "./components/HeaderSection";
 import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
 import TechSection from "./components/TechSection";
+import JourneySection from "./components/JourneySection";
+import ContactSection from "./components/ContactSection";
 
 const Page = styled.div`
   display: flex;
@@ -33,6 +35,8 @@ function App() {
         <SkillsSection />
         <ProjectsSection />
         <TechSection />
+        <JourneySection />
+        <ContactSection />
       </Content>
     </Page>
     </>
