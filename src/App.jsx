@@ -3,6 +3,7 @@ import GlobalStyles from "./GlobalStyles";
 import HeaderSection from "./components/HeaderSection";
 import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
+import TechSection from "./components/TechSection";
 
 const Page = styled.div`
   display: flex;
@@ -31,6 +32,7 @@ function App() {
         <HeaderSection />
         <SkillsSection />
         <ProjectsSection />
+        <TechSection />
       </Content>
     </Page>
     </>
