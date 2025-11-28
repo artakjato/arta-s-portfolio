@@ -17,26 +17,44 @@ const Section = styled.section`
     grid-template-columns: 1.2fr 0.8fr;
     align-items: center;
   }
+
+  @media (max-width: 600px) {
+    text-align: center;
+  }
 `;
 
 const Title = styled.h1`
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   margin: 0.5rem 0 1rem;
+
+  @media (max-width: 600px) {
+    font-size: 2rem;
+  }
 `;
 
 const Intro = styled.p`
   max-width: 34rem;
   line-height: 1.6;
+
+  @media (max-width: 600px) {
+    margin: 0 auto;
+  }
 `;
 
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
-  border: 8px solid #f97316; /* orange ring */
+`;
+
+const AvatarRing = styled.div`
+  border: 8px solid #f97316;
   border-radius: 50%;
-  padding: 6px; /* space between the ring and the image */
-  width: fit-content;
-  height: fit-content;
+  padding: 6px; 
+
+  @media (max-width: 600px) {
+    border-width: 6px;
+    padding: 4px;
+  }
 `;
 
 const Avatar = styled.img`
@@ -44,6 +62,11 @@ const Avatar = styled.img`
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
+
+  @media (max-width: 600px) {
+    width: 160px;
+    height: 160px;
+  }
 `;
 
 const IconRow = styled.div`

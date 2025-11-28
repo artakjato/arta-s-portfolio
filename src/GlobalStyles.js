@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Inter', sans-serif;
-    font-size: 1rem; /* Body size */
+    font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1rem);
     line-height: 1.6;
     color: #27272a; 
     background-color: #f7f7f7;

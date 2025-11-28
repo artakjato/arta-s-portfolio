@@ -1,68 +1,107 @@
 import styled from "styled-components";
 
 const Section =styled.section`
-  margin-bottom: 4rem 0;
+  margin-top: 6rem;
 `;
 
-const Title= styled.h2`
+const Heading= styled.h2`
   text-align: center;
   font-size: 2rem;
   margin-bottom: 3rem; 
+  }
 `;
 
-const SkillsGrid = styled.div`
+const Grid = styled.div`
 display: grid;
-gap: 3rem; 
+gap: 4rem;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+align-items: flex-start;
+justify-items: start;
 
-@media (min-width: 900px) {
-  grid-template-columns: repeat(4, 1fr);
+@media (max-width: 900px) {
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  justify-items: center;
 }
 `;
 
-const Column = styled.div`
-position: relative;
-padding-right: 1.5rem;
+const Group = styled.div`
+  position: relative;
+  padding: 0 2rem;
 
-&::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 5px;
-  height: 100%;
-  background-color: #f97316;
-  border-radius: 999px;
-}
+  @media (max-width: 900px) {
+    padding: 0 0 1.5rem;
+    text-align: center;
+  }
+  /*Orange bar divider*/
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 200px;
+    background: #f97316;
+    transform: translateX(-50% -50%);
+  }
 
-&:last-child::after {
-  display:none;
+  &:first-child::before {
+    display:none;
+  }
+
+  @media (max-width: 900px) {
+  &::before {
+    left: 50%;
+    top: auto;
+    bottom: 0;
+    transform: translate(-50%);
+    height: 3px;
+    width: 150px;
+  }
+
+  &:first-child::before {
+    display: block;
+  }
+
+  &:last-child::before {
+    display:none;
+  }
 }
 `;
 
-const ColumnTitle = styled.h3`
+
+const GroupTitle = styled.h3`
   font-size: 1rem;
   margin-bottom: 0.75rem;
-  font-weight: 600; 
+
+  @media (max-width: 900px) {
+    text-align: center;
+  }
 `;
 
 const List = styled.ul`
-list-style: none;
-padding: 0;
-margin: 0;
-`; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
 
-const Item = styled.li`
-margin-bottom: 0.4rem;
+  @media (max-width: 900px) {
+    text-align: center;
+  }
 `;
 
-export default function SkillsSection() {
-  return (
-    <Section aria-labelledby="skills-heading">
-      <Title id="skills-heading">Skills</Title>
+const Item = styled.li`
+  font-size: 0.95rem;
+  line-height: 1.5;
+`;
 
-      <SkillsGrid>
-        <Column>
-        <ColumnTitle>Code</ColumnTitle>
+function SkillsSection() {
+  return (
+    <Section aria-labelledby="skills">
+      <Heading id="skills">Skills</Heading>
+
+      <Grid>
+        <Group>
+        <GroupTitle>Code</GroupTitle>
         <List>
           <Item>HTML5</Item>
           <Item>CSS</Item>
@@ -71,27 +110,27 @@ export default function SkillsSection() {
           <Item>React</Item>
           <Item>Styled Components</Item>
         </List>
-       </Column>
+       </Group>
 
-        <Column>
-        <ColumnTitle>Toolbox</ColumnTitle>
+        <Group>
+        <GroupTitle>Toolbox</GroupTitle>
         <List>
           <Item>VS Code</Item>
           <Item>GitHub</Item>
           <Item>Netlify</Item>
           <Item>Figma</Item>
         </List>
-        </Column>
+        </Group>
 
-        <Column>
-        <ColumnTitle>Upcoming</ColumnTitle>
+        <Group>
+        <GroupTitle>Upcoming</GroupTitle>
         <List>
           <Item>Node.js</Item>
         </List>
-        </Column>
+        </Group>
 
-        <Column>
-        <ColumnTitle>More</ColumnTitle>
+        <Group>
+        <GroupTitle>More</GroupTitle>
         <List>
           <Item>Process clarity</Item>
           <Item>Accessibility mindset</Item>
@@ -99,9 +138,10 @@ export default function SkillsSection() {
           <Item>Agile ways of working</Item>
           <Item>Stakeholder alignment</Item>
         </List>
-       </Column>
-       </SkillsGrid>
+       </Group>
+       </Grid>
     </Section>
   );
 }
 
+export default SkillsSection; 

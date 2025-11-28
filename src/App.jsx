@@ -12,16 +12,19 @@ const Page = styled.div`
   justify-content: center;
   background-color: #f7f7f7;
   min-height: 100vh;
-  padding: 3rem 0;
 `;
 
 const Content = styled.main`
   width: 100%;
   max-width: 1200px;
-  padding: 2rem;
+  padding: 2.5rem 1.5rem 3rem;
 
   @media (min-width: 768px) {
     padding: 3rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 2rem 1.25rem 2.5rem;
   }
 `;
 
