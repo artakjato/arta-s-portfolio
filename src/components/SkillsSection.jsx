@@ -69,7 +69,6 @@ const Group = styled.div`
 }
 `;
 
-
 const GroupTitle = styled.h3`
   font-size: 1rem;
   margin-bottom: 0.75rem;
