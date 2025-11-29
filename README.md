@@ -1,6 +1,6 @@
 Portfolio Project – Arta Kjato
 
-This is my portfolio project built during the Technigo Web Development Bootcamp: https://artak-portfolio.netlify.app/
+This is my portfolio project built during the Technigo Web Development Bootcamp: https://app.netlify.com/projects/artak-portfolio/overview
 The goal was to create a simple and clear personal site showing who I am, what I’m learning, and the projects I’m building as I grow into software development.
 
 The portfolio is built with React, using components, props, styled components, and a structure that follows the Figma design provided by Technigo.
