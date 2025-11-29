@@ -15,8 +15,8 @@ const Card = styled.div`
 
   &:hover {
     border-color: #f97316;
-    transform: translateY(-6px);
-    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.8);
   }
 `;
 
@@ -34,8 +34,8 @@ const Title = styled.h3`
 const Description = styled.p`
   font-size: 0.9rem;
   line-height: 1.5;
-  margin: 0 0 1rem;
-  color: #374151;
+  margin: 0;
+  color: #4b5563;
 `;
 
 const ButtonRow = styled.div`
@@ -81,20 +81,30 @@ const SecondaryButton = styled.a`
   }
 `;
 
-function ProjectCard({ image, title, description, demo, code }) {
+function ProjectCard({ 
+  image, 
+  title, 
+  description, 
+  demo, 
+  code,
+  primaryLabel = "Live demo",
+  secondaryLabel = "View code",
+}) {
   return (
     <Card>
-      <Image src={image} alt={title} />
+      {image && <Image src={image} alt={title} />}
       <Title>{title}</Title>
       <Description>{description}</Description>
 
       <ButtonRow>
-        <PrimaryButton href={demo} target="_blank" rel="noopener noreferrer">
-          Live demo
-        </PrimaryButton>
+        {demo && ( <PrimaryButton href={demo} target="_blank" rel="noopener noreferrer">
+          {primaryLabel}
+        </PrimaryButton>)}
+
+        {code && (
         <SecondaryButton href={code} target="_blank" rel="noopener noreferrer">
-          View code
-        </SecondaryButton>
+          {secondaryLabel}
+        </SecondaryButton>)}
       </ButtonRow>
     </Card>
   );
